@@ -1,0 +1,371 @@
+/* // Variables */
+
+$desktop: 2000px;
+$laptop: 1920px;
+$tablet:  1200px;
+$phone: 800px;
+
+:root {
+    --animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    --animation-duration: 1s;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9f1;
+    color: #333;
+    margin: 0;
+}
+
+header {
+    background-color: #97786a;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.intro {
+    /* background-color: #f2d2d7; */
+    font-size: 20px;
+}
+
+.button {
+    background-color: #ff6f61;
+    color: white;
+    margin: 40px !important;
+    margin-top: 50px;
+    text-decoration: none;
+    border-radius: 5px;
+
+    @media (max-width: $desktop) {
+        padding: 20px 182px;
+    }
+
+    @media (max-width: $tablet) {
+        padding: 20px 30px;
+    }
+}
+
+
+.button:hover {
+    background-color: #880c00;
+    color: #ff6f61;
+}
+
+.favorites {
+    text-align: center;
+    background-color: #f9c4c4;
+
+    @media (max-width: $desktop) {
+        padding: 80px;
+    }
+
+    @media (max-width: tablet) {
+        padding: 20px;
+    }
+}
+
+.favorites-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    @media (max-width: $tablet) {
+        flex-direction: column;
+    }
+}
+
+.favorite-item {
+    // background-color: #e0e0e0;
+    padding: 10px;
+    border-radius: 5px;
+    position: relative;
+    
+}
+
+.favorite-item img {
+    -webkit-filter: blur(3px);
+    filter: blur(3px);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in;
+    height: 500px;
+    border-radius: 50px;
+    border: 10px solid whitesmoke;
+
+    @media (max-width: $desktop) {
+        height: 500px;
+    }
+    @media (max-width: $laptop) {
+        height: 500px;
+    }
+    @media (max-width: $tablet) {
+        height: 400px;
+    }
+    @media (max-width: $phone) {
+        height: 400px;
+    }
+}
+
+.favorite-item:hover img {
+    -webkit-filter: blur(0);
+    filter: blur(0);
+}
+
+.favorite-item:active img {
+    -webkit-filter: blur(0);
+    filter: blur(0);
+}
+
+.enquiries {
+    background-color: #c4dff9;
+    text-align: center;
+    
+    @media (max-width: $desktop) {
+        padding: 90px;
+    }
+
+    @media (max-width: $laptop) {
+        padding: 90px;
+    }
+
+    @media (max-width: $tablet) {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    @media (max-width: $phone) {
+        display: flex;
+        flex-direction: column;
+
+    }
+}
+
+.enquiries h2 {
+    margin-bottom: 40px;
+
+    @media (max-width: $desktop) {
+        margin-bottom: 40px;
+    }
+
+    @media (max-width: $tablet) {
+        margin-bottom: 20px;
+    }
+}
+
+
+.challenge {
+    background-color: #c2d3f0;
+    text-align: center;
+    padding: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #d2e0f0;
+}
+
+
+/* HERO SECTION */
+
+.full-width-video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    /* object-position: center -115px; */
+    /* Moves the video up by 20px */
+    display: block;
+    background-color: #f9c4c4;
+    opacity: 0.8;
+}
+
+.hero-title {
+    position: absolute;
+    text-align: center !important;
+    margin: auto;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+
+    @media (max-width:$desktop) {
+        top: 60%;
+    }
+
+    @media (max-width:$tablet) {
+        top: 30%;
+    }
+
+    @media (max-width:$phone) {
+        top: 18%;
+    }
+
+    
+}
+
+
+/* font size */
+
+.logo {
+    font-size: 25px;
+    
+    @media (max-width:$desktop) {
+        font-size: 50px;
+    }
+
+    @media (max-width:$phone) {
+        font-size: 9px;
+    }  
+}
+
+.first-size {
+    font-size: 50px;
+
+    @media (max-width:$desktop) {
+            font-size: 50px;
+    }
+    @media (max-width:$laptop) {
+        font-size: 50px;
+    }
+    @media (max-width:$phone) {
+        font-size: 13px;
+    }
+}
+
+.second-size {
+    font-size: 25px;
+
+    @media (max-width:$desktop) {
+        font-size: 25px;
+    }
+
+    @media (max-width:$phone) {
+        font-size: 9px;
+    }
+}
+
+/* services */
+
+.services-title {
+    position: absolute;
+    text-align: center !important;
+    margin: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    color: whitesmoke;
+    font-size: 20px;
+}
+
+
+.js-scroll {
+    opacity: 0;
+    transition: opacity 500ms;
+}
+
+.js-scroll.scrolled {
+    opacity: 1;
+}
+
+.scrolled.slide-left {
+    animation: slide-in-left 1s ease-in-out both;
+}
+
+.scrolled.slide-right {
+    animation: slide-in-right 1s ease-in-out both;
+}
+
+.scrolled.fade-in-bottom {
+    animation: fade-in-bottom 1s ease-in-out both;
+}
+
+@keyframes fade-in-bottom {
+    0% {
+        -webkit-transform: translateY(50px);
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-left {
+    0% {
+        -webkit-transform: translateX(-100px);
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-right {
+    0% {
+        -webkit-transform: translateX(100px);
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+.dancing-script-font {
+    font-family: "Dancing Script", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.poppins-black-font {
+    font-family: "Poppins", serif;
+    font-weight: 900;
+    color: #3d302b;
+}
+
+.poppins-black-white {
+    font-family: "Poppins", serif;
+    font-weight: 900;
+    color: whitesmoke;
+}
+
+.poppins-thin-font {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    color: #3d302b;
+}
+
+.font-style {
+    padding: 30px;
+}
+
+
+
